@@ -1,0 +1,65 @@
+# /bin/bash
+
+log_path="$HOME/Library/Preferences/Macromedia/Flash Player/Logs/"
+log_filename="flashlog.txt"
+log_full_path="$log_path$log_filename"
+
+usage() {
+    echo "Usage: flashtrace read    does a tail to the flash log file (control-c to close)";
+	echo "       flashtrace clear   clear 'flashlog.txt' file"
+    echo "       flashtrace setup   creates the mm.cfg and log file"
+}
+
+create_conf_file() {
+    echo "ErrorReportingEnable=1
+TraceOutputFileEnable=1" > ~/mm.cfg
+}
+
+create_log_file() {
+    mkdir -p "$log_path"
+    touch "$log_full_path"
+}
+
+clear() {
+	echo "" > "$log_full_path"
+	setup
+}
+
+setup() {
+    create_log_file
+    create_conf_file
+}
+
+read_log() {
+    tail -f "$log_full_path"
+}
+
+if [ "$1" = "read" ]; then
+	read_log
+	exit
+elif [ "$1" = "clear" ]; then
+	clear
+	exit
+elif [ "$1" = "setup" ]; then
+	setup
+	exit
+fi
+
+OPTIONS="read clear setup exit"
+select opt in $OPTIONS; do
+	if [ "$opt" = "read" ]; then
+		read_log
+		exit
+	elif [ "$opt" = "clear" ]; then
+		clear
+		exit
+	elif [ "$opt" = "setup" ]; then
+		setup
+		exit
+	elif [ "$opt" = "exit" ]; then
+		exit
+	else
+		usage
+		exit
+	fi
+done
