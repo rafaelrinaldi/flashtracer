@@ -4,10 +4,10 @@
 
 Manage your Flash logs just using Terminal.
 
-## Usage ##
+### Usage ###
 Open your terminal and type `sh flashtracer`. Select an option and start using it. Simple as that.
 
-## Tip ##
+### Tip ###
 To make your life even easier, you can create a wrapper by editing `.bash_profile` located in the root of your machine. Open this file (using any text editor) and add:
 
 	flashtracer() {
@@ -16,10 +16,10 @@ To make your life even easier, you can create a wrapper by editing `.bash_profil
 
 Save it and now you just need to type `flashtracer`.
 
-## Credits ##
+### Credits ###
 This script was first written by [Arthur Debert][arthur_debert]. I just added some features and changed a few things.
 
-## License ##
+### License ###
 [WTFPL][license]
 
 [arthur_debert]: http://github.com/arthur-debert
