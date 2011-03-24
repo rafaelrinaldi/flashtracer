@@ -19,4 +19,8 @@ Save it and now you just need to type `flashtracer`.
 ## Credits
 This script was first written by [Arthur Debert][arthur_debert]. I just added some features and changed a few things.
 
+## License
+[WTFPL][license]
+
 [arthur_debert]: http://github.com/arthur-debert
+[license]: http://github.com/rafaelrinaldi/flashtracer/blob/master/license.txt
