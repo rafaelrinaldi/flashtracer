@@ -1,17 +1,21 @@
+[arthur_debert]: http://stimuli.com.br
+
 # flashtracer
+
+This script was first written by [Arthur Debert][arthur_debert]. I just added some features and changed a few things.
 
 Manage your Flash logs just using Terminal.
 
 ## Usage
-Open your terminal and type `sh flashtracer`. Select your option and start enjoying the tool. Simple as that.
+Open your terminal and type `sh flashtracer`. Select an option and start using it. Simple as that.
 
 ## Tip
-To make your life way more easier, you can create a flashtracer by editing `.bash_profile` located in the root of your machine. Open this file (using any text editor) and add:
+To make your life even easier, you can create a wrapper by editing `.bash_profile` located in the root of your machine. Open this file (using any text editor) and add:
 
 	flashtracer() {
 		sh ~/your-scripts-folder/flashtracer $1
 	}
 
-Now you just need to type `flashtracer`.
+Save it and now you just need to type `flashtracer`.
 
 [arthur_debert]: http://github.com/arthur-debert
