@@ -11,7 +11,7 @@ Open your terminal and type `sh flashtracer`. Select an option and start using i
 To make your life even easier, you can create a wrapper by editing `.bash_profile` located in the root of your machine. Open this file (using any text editor) and add:
 
 	flashtracer() {
-		sh ~/your-scripts-folder/flashtracer $1
+		sh ~/your-scripts-folder/flashtracer
 	}
 
 Save it and now you just need to type `flashtracer`.
